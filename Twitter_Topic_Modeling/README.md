@@ -1,40 +1,33 @@
-# Twitterda Atılmış Tweetlerin Kategori Tahmini
+# Dünyada En Çok Etkileşime Giren Yerli Twitter Hesaplarının Topic Modeling'i
 
 <br/>
 
-Bir sınıflandırma algoritmasıdır. Twitterdan alınmış olan farklı kategorilerdeki (Siyaset, Ekonomi, Spor, Teknoloji ve Bilim) tweetleri ile model eğitiliyor ve modele bir tweet gönderildiğinde bunun hangi kategoride bir tweet olduğunu tespit ediyor.
+Topic Modeling, bir metin belgesinde “topics(konular)” adı verilen kelime gruplarını bulmak için kullanılan denetimsiz(unsupervised) bir yaklaşımdır. Twitter(X)'dan alınmış olan farklı hesaplardan (BabalaTv, ProfDemirtas, haluklevent, pusholder, Darkwebhaber, yirmiucderece, solcugazete, OguzhanUgur, vekilince, GalatasaraySK, aykiricomtr ve RTErdogan) çekilen tweetler analiz edilip topiclerinin belirlenmesi.
 <br/>
 ## Kullanılan Kütüphaneler
 -Pandas<br/>
 -NumPy<br/>
--snscrape<br/>
+-Matplotlibt<br/>
 -Scikit-learn<br/>
--unicodedata <br/>
--Nltk<br/>
--Zeyrek<br/>
--Pyplot<br/>
--Tqdm<br/><br/>
-
-
 # VERİ SETİ'NİN OLUŞTURULMASI
 
-Dataseti twitter'dan çekilen ve istenilen kategorilerde atılmış tweetlerden oluşacaktır. Seçilen kategoriler Spor, Ekonomi, Siyaset, Teknoloji & Bilim ' dir. Bu kategorilerdeki veriler ile model eğitileceği için bu verilerin düzgün veriler olması gerekir. Bu yüzden verilerin çekileceği twitter hesapları düzgün bir şekilde seçilmiştir. Seçilen hesaplarda dikkat edilen özellikler şöyledir:
-
-<br/>
--Hesap aktif olarak paylaşım yapmalı.<br/>
--Yaptığı paylaşımlar sadece o alan ile ilgili olmalı.<br/>
--Günde ortalama 5-10 arası tweet atmalı.<br/>
--Atmış olduğu tweetler metin ağırlıklı olmalı.<br/>
-
+Dataseti Twitter(X)'dan çekilen ve istenilen hesaplardan atılmış tweetlerden oluşacaktır. Seçilen hesaplar BabalaTv, ProfDemirtas, haluklevent, pusholder, Darkwebhaber, yirmiucderece, solcugazete, OguzhanUgur, vekilince, GalatasaraySK, aykiricomtr ve RTErdogan ' dır. Bu hesaplardaki veriler ile model eğitileceği için bu verilerin düzgün veriler olması gerekir. Bu yüzden verilerin çekileceği twitter hesapları düzgün bir şekilde seçilmiştir.
 
 <br/>
 
-Bu kriterleri sağlayan her bir alan için ortalama 8 tane twitter hesabı seçilmiştir. Birden fazla hesap seçilmesinin amacı daha fazla veriye ulaşmaktır. 
+Bu twitter hesaplarının seçilme sebebi dünyada en çok etkileşime giren yerli Twitter(X) hesapları olmasıdır:
+https://dogruveri.com/wp-content/uploads/2023/03/Dunyada-en-cok-etkilesime-giren-yerli-Twitter-hesaplari-.png
+
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/bb5cbcbc-70d6-4581-bcbf-9877be9488bc)
+
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/7866e486-5890-4a11-8daa-c07ebc7472d6)
+
+
 
 
 <br/>
-Pythonda twitter'dan istenilen tweetleri çekebilmek için scraping işlemi yapan snscrape pyton kütüphanesi kullanılıyor. <br/>
-https://github.com/JustAnotherArchivist/snscrape
+Pythonda twitter'dan istenilen tweetleri çekebilmek için scraping işlemi yapan ntscraper kütüphanesi kullanılıyor. <br/>
+[https://github.com/JustAnotherArchivist/snscrape](https://github.com/zedeus/nitter#installation)
 
 <br/>
 <br/>

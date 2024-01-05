@@ -32,49 +32,26 @@ https://github.com/zedeus/nitter?tab=readme-ov-file
 <br/>
 <br/>
 
-Bu kütüphane verilen sorgu cümlesine göre ve istenilen tweet sayısına göre istenilen tweetleri döndürüyor. Sorgu cümlesinde hesap adı ve istenilen tarih aralığı seçilebilir.<br/><br/> 
-### Örnek bir sorgu:<br/><br/>
+Bu kütüphane verilen kullanıcı adına veya hastage göre ve istenilen tweet sayısına göre istenilen tweetleri döndürüyor.<br/><br/> 
 
-![ornek_sorgu](https://user-images.githubusercontent.com/77435563/208323507-bd8fee5f-4572-40fe-bb05-75aee43c919e.jpg)
-
-<br/>
-Bu sorguda "elonmusk" isimli kullanıcının 17 aralık 2022 tarihinden önce atmış olduğu tweetler gösteriliyor.
+Data seti'ni oluştururken yapılan sorgular 12 adet hesaptan 1000'er adet tweet çekilerek oluşturulmuştur. Her hesaptan 1000'er adet tweet çekemediği için 900, 800, 750, 600 olarak değişkenlik göstermektedir. Toplam 12 hesaptan 8810 adet tweet çekilmiştir.
 
 <br/>
 <br/>
 
-Data seti'ni oluştururken yapılan sorgular 2022 yılının tamamı için yapılmıştır. Her farklı kategori için 1 günde 1 hesaptan 16 adet tweet çekilmiştir. Hesaplar gün gün değişmektedir ve eğer 8 hesap varsa 8 gün sonunda aynı hesaptan tekrardan 16 adet tweet çekilmektedir. Verisetinin bu şekilde oluşturulmasının amacı aynı gün ve saatte birden fazla hesaptan aynı tweet gelme ihtimalinin engellenmesidir. 
-
-<br/>
-
-Veriseti oluşturmak için twitterdan her gün bir kategori için 16 adet tweet çekiliyor. 365 ayrı gün için tweet çekildiği için her kategori için 5840 adet tweet bulunmakta.
-4 kategorimiz olduğu için veri seti'nde toplam 23.360 tweet bulunuyor. Modelin başarısını arttırmak için her kategori için eşit miktarda tweet çekiliyor.<br/><br/>
-### Veri seti'nde Bulunan Kategorilerdeki Tweet Sayıları:<br/><br/>
-
-![data_set_veri_sayisi](https://user-images.githubusercontent.com/77435563/208323609-097d1ee4-3259-43ca-83ae-c65f41f1a387.jpg)
-
-<br/>
-<br/>
-
-4 kategori için 23.360 verinin çekilmesi işlemi ortalama 11 dakika 14 saniye sürüyor.<br/><br/>
-### Verilerin Çekilme Süreleri:<br/><br/>
-
-![Calisma_Suresi](https://user-images.githubusercontent.com/77435563/208323627-4d1c1486-3fd5-4eac-85db-676e4d7ae64f.jpg)
+12 hesap için 8810 adet verinin çekilmesi işlemi ortalama 35-40 dakika sürüyor.<br/><br/>
 
 <br/>
 <br/>
 
 Veri seti'ndeki kolonlarımız aşağıdaki gibidir:<br/>
--Tweet'in atıldığı tarih.<br/>
--Tweet'i atan kullanıcının hesap adı.<br/>
+-Tweet'in linki <br/>
 -Tweet'in kendisi.<br/>
--Tweet'in hangi kategoride atıldığı.<br/>
-
-<br/><br/>
-Veri seti'ne veriler eklenirken kategorileri ile birlikte ekleniyorlar. Bunun sebebi oluşturulacak olan modeli eğitmek için hangi kategoriye ait olduğunu bilmemiz gerektiğidir. <br/><br/>
+-Tweet'in like sayısı.<br/>
+-Tweet'in yorum sayısı.<br/>
 
 ### Oluşturulmuş Olan Veri seti'nin Görseli:<br/><br/>
-![data_set](https://user-images.githubusercontent.com/77435563/208323700-beb37519-6467-4230-b2e3-b59df79e17e8.jpg)
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/a4859957-af91-4d98-9c55-fcd7ad4dde03)
 <br/><br/>
 # Tweetlerin Temizlenmesi ve Lemmatization İşlemi<br/>
 Veriseti oluşturulduktan sonra modelin daha iyi çalışması ve başarı oranının daha yüksek olması için tweetlerin temizlenmesi gerekmektedir. Tweetlerin içerisinde emojiler, noktalama işaretleri, stopwordsler, linkler gibi istenmeyen ve modelin başarısını düşürecek veriler tweetlerin içerisinden temizleniyor. Daha sonra lemmatization (kelimelerin köklerinin alınması) işlemi yapılarak temiz ve kelimelerin köklerinden oluşan tweetler elde ediliyor.

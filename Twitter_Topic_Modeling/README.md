@@ -129,70 +129,45 @@ Modeli görselleştirmek için `plot_top_words` fonksiyonunu yazıyoruz.<br/><br
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/cd91089b-ba66-4fe0-96bc-030441e871c3)
 
 
-### Modellerin Tweetlere Göre Yaptığı Tahminler<br/>
-
-## NMF Modelinin Rastgele Tweetlere Yaptığı Tahminler
-# Test 1:
-![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/b5102473-3550-4cc0-98d6-bc02d735a957)
+# Modellerin Tweetlere Göre Önerdiği Topicler<br/>
 
 
-<br/>
+## LDA Modelinin Tweetlere Göre Önerdiği Topicler
+### Test 1:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/525e0018-6c7a-4045-a7ea-61e0afdc3afa)
 
-Tweetlerin kategorilerine ve modellerin yaptığı tahminlere bakıldığında modeller oldukça iyi çalışıyor gibi gözüküyor. 4666. tweete bakıldığında naive bayes modelinin bu tweet için yanlış tahmin yaptığını görüyoruz.
-<br/>
-### Modellerin Hata Oranları
-Modellerin hata oranlarını tespit etmek için 2 farklı metrik kullanılmıştır. Bunlar Ortalama Kare Hatası(MSE) ve Ortalama Mutlak Hata(MAE) dir. <br/>
+### Test 2:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/17a798d0-0d7b-43af-b048-e97974569059)
 
-##### Ortalama Kare Hatası(MSE)
-Ortalama Kare Hatası tahmin edilen sonuçlarınızın gerçek sayıdan ne kadar farklı olduğuna dair size mutlak bir sayı verir.<br/>
+### Test 3:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/9b993aa8-5be5-4f71-8e90-2fb117ce13ea)
 
-##### Ortalama Mutlak Hata(MAE)
-Ortalama mutlak hata, mutlak hata değerinin toplamını alır, hata terimlerinin toplamının daha doğrudan bir temsilidir.<br/>
+### Test 4:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/ab5051d6-f3a3-4b45-9de1-1a04d21c9fda)
 
-![image](https://user-images.githubusercontent.com/77435563/209441007-321dd72c-936a-499d-b6ed-98d4fa4e533a.png)<br/><br/>
-Sonuçlar incelendiğinde Support Vector Machine modelinin Naive Bayes modeline göre biraz daha fazla hata yaptığını görüyoruz.
+### Test 5:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/255f2c48-0199-4ab7-9e63-f26d3b21cb47)
 
-<br/><br/>
 
-### Manuel Tweet Testi
-Modeli manuel olarak test etmek için elle bazı tweetler girilecek ve modelin bu tweetlerin hangi kategoriye ait olduğunu tahmin etmesi istenecektir. Test sonuçları aşağıda gösterilmiştir.
-<br/>
-##### Test1:
-![test1](https://user-images.githubusercontent.com/77435563/209444285-c282e9bc-783d-46b9-9a78-c9680c74316a.jpg)
-<br/>
-##### Test2:
-![test2](https://user-images.githubusercontent.com/77435563/209444313-207e0ace-2c6a-496d-816f-c42937360ecc.jpg)
-<br/>
-##### Test3
-![test3](https://user-images.githubusercontent.com/77435563/209444333-fd699f6e-24c6-46b6-8d36-fe75841cb7a3.jpg)
-<br/>
-##### Test4
-![test4](https://user-images.githubusercontent.com/77435563/209444345-0478781e-582a-4de5-817d-17e82a2834da.jpg)
-<br/>
-##### Test5
-![test5](https://user-images.githubusercontent.com/77435563/209444369-68534217-4604-4b11-bd1f-22c7ef512f40.jpg)
-<br/>
-##### Test6
-![test6](https://user-images.githubusercontent.com/77435563/209444379-f7e20721-ffac-4919-b7b4-ce5f19d3c624.jpg)
-<br/>
-##### Test7
-![test7](https://user-images.githubusercontent.com/77435563/209444389-8d4d6302-1816-4df8-80d8-6fbc83653bed.jpg)
-<br/>
-##### Test8
-![test8](https://user-images.githubusercontent.com/77435563/209444402-6eab3c37-0a33-44f2-accb-4dff92a3a4fe.jpg)
-<br/>
-##### Test9
-![test9](https://user-images.githubusercontent.com/77435563/209444412-0cd7d777-a978-4355-a8ea-65774555555e.jpg)
-<br/>
-##### Test10
-![test10](https://user-images.githubusercontent.com/77435563/209444419-4a078e5c-f34c-4cd1-a116-9221cd52c875.jpg)
-<br/>
-##### Test11
-![test11](https://user-images.githubusercontent.com/77435563/209444428-702adbc1-a23f-4d5c-8368-03b34f58807e.jpg)
-<br/>
-##### Test12
-![test12](https://user-images.githubusercontent.com/77435563/209444433-0c887130-7d0d-4a31-adbf-f4c270922631.jpg)
-<br/>
+## NMF Modelinin Tweetlere Göre Önerdiği Topicler
+### Test 1:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/43628e55-6a36-490c-970a-04aa24a7fca5)
+
+### Test 2:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/67e9d1a0-1faa-46a7-9725-56725ed5c8e8)
+
+### Test 3:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/34fc4328-0c48-4aa6-9337-928fe2c13c75)
+
+### Test 4:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/df151241-a2ea-45eb-ad54-5fdce8fe1595)
+
+### Test 5:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/e1d495e3-4bdc-40e2-83d3-1c979a6f032c)
+
+
+
+
 
 # Sonuç
 Sonuca bakıldığında yapılan projede seçilen modelin ne kadar önemli olduğu görülmektedir. Başlangıçta test edilmiş olan DecitionTree ve K-Nearest Neighbor modelinin bu veriseti için uygun modeller olmadığı görülmüştür. Yapılan farklı projelerde farklı modeller daha iyi sonuç verebilmektedir. Model seçiminin önemi kadar verisetinin güzel bir şekilde hazırlanmış olması, verisetindeki noktalama işaretleri ve modele olumsuz etki edecek stopwordslerden arındırılmış olması, verisetindeki verilerin miktari, eğitim-test verilerinin parçalanma oranı vs. modelin başarısına etki eden çok önemli faktörlerdir. Bu projede ulaşılan başarı oranı(%86) yüksek bir başarı oranına sahip değildir bunun en temel sebebi verisetini oluştururken farklı kategorilerden alınmış tweetlerin seçilmiş olan hesaplardan alınmasıdır. Seçilmiş hesaplar ne kadar özenle seçilmiş olsa da bazı tweetlerinde paylaşım yaptığı kategorinin dışına çıktığı görülmüştür. Örneğin spor paylaşımı yapan twitter hesabı, asgari ücret açıklandığında önemli bir gelişme olduğu için bunu da paylaşım yapabilmektedir. Verisetinde 23.000 üzerinde tweet bulunduğundan dolayı bu tweetlerin tek tek kontrol edilme imkanı yoktur. Veriseti oluşturulurken seçilen paylaşımların ve hesapların başarıda önemli bir rolü vardır.

@@ -87,17 +87,17 @@ NMF'nin kullanıldığı yerler arasında konu çıkarma, görüntü işleme ve 
 ## Modelin Oluşturulmaya Başlanması
 
 ### Veri Setinin Hazırlanması
-Clean tweetlerin bulunduğu "clean_tweets.csv" dosyası dataframeye aktarılmıştır. Daha sonra veri seti içinde NaN değeri olan satırlar varsa bu satırlar silinir. NaN değerleri olursa modelimiz hata vermektedir.<br/><br/>
+Clean tweetlerin bulunduğu `clean_tweets.csv` dosyası dataframeye aktarılmıştır. Daha sonra veri seti içinde NaN değeri olan satırlar varsa bu satırlar silinir. NaN değerleri olursa modelimiz hata vermektedir.<br/><br/>
 
 ### Metin Verilerini Sayısal Bir Formata Dönüştürme İşlemi
 TfidfVectorizer fonksiyonu bir metin madenciliği aracıdır ve metin verilerini TF-IDF (Term Frequency-Inverse Document Frequency) vektörlerine dönüştürmek için kullanılır.
-"max_df" ve "min_df" parametreleri, vektörleştirme işlemi sırasında dikkate alınacak terimlerin belirlenmesine yardımcı olan önemli parametrelerdir:
-   "max_df": Belirtilen bir eşik değerinden yüksek olan terimler, belgelerin yüzde kaçında görülüyorsa, dikkate alınmaz.       Bu, genellikle sık kullanılan kelimelerin (stop words) veya çok spesifik kelimelerin filtrelenmesinde kullanılır.
+`max_df` ve `min_df` parametreleri, vektörleştirme işlemi sırasında dikkate alınacak terimlerin belirlenmesine yardımcı olan önemli parametrelerdir:
+   `max_df`: Belirtilen bir eşik değerinden yüksek olan terimler, belgelerin yüzde kaçında görülüyorsa, dikkate alınmaz.       Bu, genellikle sık kullanılan kelimelerin (stop words) veya çok spesifik kelimelerin filtrelenmesinde kullanılır.
 
-   "min_df": Belirtilen bir eşik değerinden düşük olan terimler, belgelerin yüzde kaçında görülüyorsa, dikkate alınmaz.   
+   `min_df`: Belirtilen bir eşik değerinden düşük olan terimler, belgelerin yüzde kaçında görülüyorsa, dikkate alınmaz.   
     Bu, nadir görülen terimleri filtrelemek için kullanılır.
     
-"vectorizer.fit_transform(df["clean"])" ile, "clean" adlı sütundaki metin verileri üzerinde TF-IDF vektörleştirmesi yapılır. Bu işlem, her bir belgeyi vektörlerle temsil eden bir matris oluşturur.
+`vectorizer.fit_transform(df["clean"])` ile, `clean` adlı sütundaki metin verileri üzerinde TF-IDF vektörleştirmesi yapılır. Bu işlem, her bir belgeyi vektörlerle temsil eden bir matris oluşturur.
 
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/f28d94e1-3d82-4dbb-b937-8e87bdfaa346)
 
@@ -117,7 +117,7 @@ Daha sonra, bu model `lda.fit(X)` ile eğitilir. `X` önceki aşamada oluşturul
  <br/><br/>
 
 ### Modelleri Görselleştirme
-Modeli görselleştirmek için plot_top_words fonksiyonunu yazıyoruz.<br/><br/>
+Modeli görselleştirmek için `plot_top_words` fonksiyonunu yazıyoruz.<br/><br/>
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/432eadd3-78e2-489d-92a3-47b865ed82d0)
 
 

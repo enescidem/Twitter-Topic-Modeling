@@ -56,6 +56,11 @@ Veri seti'ndeki kolonlarımız aşağıdaki gibidir:<br/>
 # Tweetlerin Temizlenmesi ve Lemmatization İşlemi<br/>
 Veriseti oluşturulduktan sonra modelin daha iyi çalışması ve başarı oranının daha yüksek olması için tweetlerin temizlenmesi gerekmektedir. Tweetlerin içerisinde emojiler, noktalama işaretleri, stopwordsler, linkler gibi istenmeyen ve modelin başarısını düşürecek veriler tweetlerin içerisinden temizleniyor. 
 <br/><br/>
+### Tweetlerin Temizlenmesi Sırasında Yapılan İşlemler<br/><br/>
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/ec423e8e-3dca-4f75-8d44-9b18042e34f7)
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/fef03545-0fd3-4c30-91c1-de82ba31a037)
+
+<br/><br/>
 ### Oluşturulan Temiz Tweet Görseli<br/><br/>
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/5a9c312f-c416-492d-a2d9-8967e6532907)
 <br/><br/>

@@ -67,30 +67,22 @@ Veriseti oluşturulduktan sonra modelin daha iyi çalışması ve başarı oran�
 
 # Modelin Oluşturulması ve Tweetlerin Kategorilendirilmesi<br/>
 
-## Model Seçimi
-Yapılacak kategorilendirme işleminin hangi modelde daha yüksek başarı oranı vereceğini tespit etmek amacıyla araştırma yapılıp aynı zamanda bazı modeller üzerinde de test edilmiştir. Başlangıç olarak 3 popüler model üzerinde denemeler yapılmıştır. Bu modeller Naive Bayes, DecitionTree ve K-Nearest Neighbor modelidir. Veriseti üzerinde bu modellerin accuracy ve f1 score ları test edilmiştir. Projedeki test veriseti sonuçlarına bakıldığında:<br/>
-Naive Bayes Modeli için  accuracy: 0.864 <br/>
-DecitionTree Modeli için accuracy: 0.765 <br/>
-K-Nearest Neighbor için accuracy: 0.774 <br/>
-<br/>
-Sonuçlar incelendiğinde DecitionTree ve K-Nearest Neighbor modelinin projede kullanılan verisetine göre yapacağı kategorilendirmenin başarısı yeterli olmamıştır. Bu iki modelin kullanımından vazgeçilmiştir. Alternatif model arayışı için araştırma yapılıp yine sınıflandırma için çok kullanılan model olan Support Vector Machine modeli araştırılıp başarısının ölçülmesi için test edilmiştir. Projedeki test veriseti sonuçlarına bakıldığında:<br/>
-Support Vector Machine Modeli için accuracy: 0.868 <br/>
-<br/><br/>
-Yapılan test işlemleri sonucunda projede Naive Bayes ve Support Vector Machine modeli kullanılmıştır. 
-
 ## Modelin Oluşturulmaya Başlanması
 
-### Etiketleme
-Clean tweetlerin bulunduğu "clean_all_tweets.csv" dosyası dataframeye aktarılmıştır. Tweetlerin kategorileri kelime şeklinde kayıtlı olduğu için bu kategoriler 0, 1, 2, 3 gibi bilgisayarın anlayabileceği bir formata dönüştürülmelidir. Labels adında yeni bir kolon açılarak kategorisi spor olan tweetler için 0 rakamı, kategorisi ekonomi olan tweetler için 1 rakamı, kategorisi siyaset olan tweetler için 2 rakamı ve kategorisi teknoloji & bilim olan tweetler için 3 rakamı labels olarak eklenmiştir.<br/><br/>
- 
-![labels](https://user-images.githubusercontent.com/77435563/209437433-be95afad-bcfc-4654-bde2-21c913d844fd.jpg) <br/><br/>
+### Veri Setinin Hazırlanması
+Clean tweetlerin bulunduğu "clean_tweets.csv" dosyası dataframeye aktarılmıştır. Daha sonra veri seti içinde NaN değeri olan satırlar varsa bu satırlar silinir. NaN değerleri olursa modelimiz hata vermektedir.<br/><br/>
 
-### Verisetinin Parçalanması
-Modelin başarısını doğru şekilde ölçebilmek için modeli eğittiğimiz veriler ile test ettiğimiz veriler farklı olmalıdır. Modelin eğitilmiş olduğu verileri tekrar modele gönderirsek model bu veriler ile eğitildiği için başarısı yüksek ve yanıltıcı olacaktır. Bu yüzden verisetini parçalamamız gerekir. Bu projede verisetinin %80 'i modeli eğitmek için, %20 'si de modeli test etmek için kullanılacaktır. <br/>
-Aşağıda verisetinin nasıl parçalanacağının bir örneği gösterilmiştir.<br/><br/>
-![train_test](https://user-images.githubusercontent.com/77435563/209437930-439dc4dd-c353-4205-b437-3d6d9aa5762d.jpg)
-<br/>
-Verisetini parçalamak için train_test_split() fonksiyonu kullanılmıştır.<br/>
+### Metin Verilerini Sayısal Bir Formata Dönüştürme İşlemi
+TfidfVectorizer fonksiyonu bir metin madenciliği aracıdır ve metin verilerini TF-IDF (Term Frequency-Inverse Document Frequency) vektörlerine dönüştürmek için kullanılır.
+"max_df" ve "min_df" parametreleri, vektörleştirme işlemi sırasında dikkate alınacak terimlerin belirlenmesine yardımcı olan önemli parametrelerdir:
+   "max_df": Belirtilen bir eşik değerinden yüksek olan terimler, belgelerin yüzde kaçında görülüyorsa, dikkate alınmaz.       Bu, genellikle sık kullanılan kelimelerin (stop words) veya çok spesifik kelimelerin filtrelenmesinde kullanılır.
+
+   "min_df": Belirtilen bir eşik değerinden düşük olan terimler, belgelerin yüzde kaçında görülüyorsa, dikkate alınmaz.   
+    Bu, nadir görülen terimleri filtrelemek için kullanılır.
+    
+"vectorizer.fit_transform(df["clean"])" ile, "clean" adlı sütundaki metin verileri üzerinde TF-IDF vektörleştirmesi yapılır. Bu işlem, her bir belgeyi vektörlerle temsil eden bir matris oluşturur.
+
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/f28d94e1-3d82-4dbb-b937-8e87bdfaa346)
 
 ### Tweetlerin Vektörel Matrisinin Çıkarılması
 Tweetler metinden oluştuğu için bunun bilgisayar ortamında işlenmesi mümkün değildir bu yüzden veriler sayısal değerlere dönüştürülmelidir. Bir sözlük oluşturularak dökümandaki her kelime için bir indexleme yapılır. Daha sonra hangi index numarasına sahip kelimenin hangi tweette kaç kere geçtiği hesaplanarak sayma matrisi oluşturulur. Bu işlemi yaparken tf-idf vectorizer kullanılarak bir kelimenin döküman içindeki önemi istatistiksel olarak hesaplanmıştır. Bu sayede her tweette geçen model için anlamsız kelimelerin önemi düşürülmüştür yani stopwordsler tekrardan ayıklanmıştır. <br/><br/>

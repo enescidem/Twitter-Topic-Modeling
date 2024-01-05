@@ -27,7 +27,7 @@ Bu twitter hesaplarının seçilme sebebi dünyada en çok etkileşime giren yer
 
 <br/>
 Pythonda twitter'dan istenilen tweetleri çekebilmek için scraping işlemi yapan ntscraper kütüphanesi kullanılıyor. <br/>
-[[https://github.com/JustAnotherArchivist/snscrape](https://github.com/zedeus/nitter#installation)](https://github.com/zedeus/nitter#installation)
+https://github.com/zedeus/nitter?tab=readme-ov-file
 
 <br/>
 <br/>

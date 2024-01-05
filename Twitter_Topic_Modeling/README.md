@@ -129,19 +129,13 @@ Modeli görselleştirmek için `plot_top_words` fonksiyonunu yazıyoruz.<br/><br
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/cd91089b-ba66-4fe0-96bc-030441e871c3)
 
 
-Naive Bayes             |  Support Vector Machine
-:-------------------------:|:-------------------------:
-![nb_basari (2)](https://user-images.githubusercontent.com/77435563/209439633-0d852e76-224c-40b6-8fa3-d5f37f361ae0.jpg)  |  ![svm_basari (2)](https://user-images.githubusercontent.com/77435563/209439642-34c95bb2-7912-49d0-98fb-7ee312272075.jpg) 
-<br/>
-Sonuçlar incelendiğinde Her iki modelin de en başarılı tahmin yaptığı kategorinin spor kategorisi olduğunu görülmektedir. Ekonomi ve siyaset alanında ise başarının 0.8 oranına kadar düştüğü görülmektedir. Bunun sebebi ekonomi ve siyaset alanında atılan tweetlerin birbiri ile bağlantılı tweetler olmasıdır. Çünkü ülke yönetimi yüzünden ekonominin kötü gidişatı hakkında atılan bir tweet düşünülürse bunun hem ekonomi, hem de siyasi bir tweet olduğunu söyleyebiliriz. Modelimiz tweeti bir kategoriye sokmak için zorladığından hata yapma oranı bu kategorilerde daha yüksektir.
-
-<br/>
-
 ### Modellerin Tweetlere Göre Yaptığı Tahminler<br/>
-Aşağıdaki görseldeki kolonlarda, tweet, tweetin bulunduğu kategori, Naive Bayes modelinin tweet için tahmini ve Support Vector Machine modelinin tweet için tahmini gösterilmektedir. <br/><br/>
-0=spor ,  1=ekonomi ,  2=siyaset ,  3=teknoloji & bilim
 
-![](https://user-images.githubusercontent.com/77435563/209441394-a70d3e80-9285-43fe-9495-59bc022935bb.png)
+## NMF Modelinin Rastgele Tweetlere Yaptığı Tahminler
+# Test 1:
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/b5102473-3550-4cc0-98d6-bc02d735a957)
+
+
 <br/>
 
 Tweetlerin kategorilerine ve modellerin yaptığı tahminlere bakıldığında modeller oldukça iyi çalışıyor gibi gözüküyor. 4666. tweete bakıldığında naive bayes modelinin bu tweet için yanlış tahmin yaptığını görüyoruz.

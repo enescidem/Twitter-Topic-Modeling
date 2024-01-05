@@ -67,6 +67,23 @@ Veriseti oluşturulduktan sonra modelin daha iyi çalışması ve başarı oran�
 
 # Modelin Oluşturulması ve Tweetlerin Kategorilendirilmesi<br/>
 
+## Model Tanımı
+Modelimiz metin verileri üzerinde iki farklı konu çıkarma yöntemi olan LDA ve NMF'nin çıkarılması ve her iki yöntemin sonuçlarını görselleştirmek için grafikler oluşturulmasından ibaretdir. 
+
+### Latent Dirichlet Allocation (LDA):
+
+LDA, belgelerin bir koleksiyonu içinde gizli olan temel konuları (topic) çıkarmak için kullanılan bir olasılıksal bir modeldir.
+Temel bir varsayım, belgelerin bir veya birden fazla konuya ait olabileceği ve her bir konunun bir olasılık dağılımı ile temsil edilebileceğidir.
+LDA, belge-konu ve kelime-konu olasılık dağılımlarını keşfetmeye çalışarak belgeleri bu gizli konulara ayırır.
+Bu model, genellikle metin belgeleri üzerinde konu çıkarma, belge sınıflandırma ve benzeri görevlerde kullanılır.
+
+### Non-negative Matrix Factorization (NMF):
+
+NMF, bir matrisin çarpanlarını (faktörlerini) bulmaya çalışan bir matris ayrıştırma tekniğidir.
+Belirli bir veri matrisini, iki veya daha fazla alt matrise çarpanları çarpanları (faktörleri) olarak ayrıştırmaya odaklanır. Bu faktörler genellikle pozitif değerlere sahiptir.
+Metin madenciliği bağlamında, NMF belgeleri ve kelimeleri içeren bir matrisi, temel konuların (topic) lineer kombinasyonları olarak ifade etmeye çalışır.
+NMF'nin kullanıldığı yerler arasında konu çıkarma, görüntü işleme ve özellik seçimi gibi alanlar bulunmaktadır.
+
 ## Modelin Oluşturulmaya Başlanması
 
 ### Veri Setinin Hazırlanması

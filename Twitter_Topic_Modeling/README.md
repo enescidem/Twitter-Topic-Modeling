@@ -54,10 +54,10 @@ Veri seti'ndeki kolonlarımız aşağıdaki gibidir:<br/>
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/a4859957-af91-4d98-9c55-fcd7ad4dde03)
 <br/><br/>
 # Tweetlerin Temizlenmesi ve Lemmatization İşlemi<br/>
-Veriseti oluşturulduktan sonra modelin daha iyi çalışması ve başarı oranının daha yüksek olması için tweetlerin temizlenmesi gerekmektedir. Tweetlerin içerisinde emojiler, noktalama işaretleri, stopwordsler, linkler gibi istenmeyen ve modelin başarısını düşürecek veriler tweetlerin içerisinden temizleniyor. Daha sonra lemmatization (kelimelerin köklerinin alınması) işlemi yapılarak temiz ve kelimelerin köklerinden oluşan tweetler elde ediliyor.
+Veriseti oluşturulduktan sonra modelin daha iyi çalışması ve başarı oranının daha yüksek olması için tweetlerin temizlenmesi gerekmektedir. Tweetlerin içerisinde emojiler, noktalama işaretleri, stopwordsler, linkler gibi istenmeyen ve modelin başarısını düşürecek veriler tweetlerin içerisinden temizleniyor. 
 <br/><br/>
 ### Oluşturulan Temiz Tweet Görseli<br/><br/>
-![clean](https://user-images.githubusercontent.com/77435563/209435327-a5f9ffd7-bdcd-4f6e-954c-bb912484d395.jpg)
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/8971bddc-b70e-45eb-ab48-e980020cd588)
 <br/><br/>
 
 # Modelin Oluşturulması ve Tweetlerin Kategorilendirilmesi<br/>

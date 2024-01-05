@@ -101,21 +101,33 @@ TfidfVectorizer fonksiyonu bir metin madenciliği aracıdır ve metin verilerini
 
 ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/f28d94e1-3d82-4dbb-b937-8e87bdfaa346)
 
-### Tweetlerin Vektörel Matrisinin Çıkarılması
-Tweetler metinden oluştuğu için bunun bilgisayar ortamında işlenmesi mümkün değildir bu yüzden veriler sayısal değerlere dönüştürülmelidir. Bir sözlük oluşturularak dökümandaki her kelime için bir indexleme yapılır. Daha sonra hangi index numarasına sahip kelimenin hangi tweette kaç kere geçtiği hesaplanarak sayma matrisi oluşturulur. Bu işlemi yaparken tf-idf vectorizer kullanılarak bir kelimenin döküman içindeki önemi istatistiksel olarak hesaplanmıştır. Bu sayede her tweette geçen model için anlamsız kelimelerin önemi düşürülmüştür yani stopwordsler tekrardan ayıklanmıştır. <br/><br/>
+### Latent Dirichlet Allocation (LDA) modeli oluşturma
+`LatentDirichletAllocation` bir konu modelleme tekniğidir ve belgelerin gizli konularını çıkarmak için kullanılır.
 
-### Modellerin Eğitilmesi
-Daha önceden parçalanmış olan X_train ve y_train verileri Naive Bayes ve Support Vector Machine modeline gönderilerek modeller eğitilmiştir. Eğitim sonucunda modellerin accuracy ve f1 score değerleri hesaplanmıştır. Modelleri eğitmek için sklearn kütüphanesi kullanılmıştır.<br/><br/>
+`n_components=8` parametresi, modelin kaç adet konu çıkaracağını belirtir. Bu örnekte, 8 adet konu belirlenmiştir.
 
-### Modellerin Başarısının Hesaplanması
-Modelin başarısı hem train hem test verileri üzerinden Accuracy ve F1 score ile ölçülmüştür. Alınan sonuçlar aşağıda bulunmaktadır.<br/><br/>
+`random_state=42` parametresi, modelin tekrarlanabilirliğini sağlamak için kullanılır. Aynı `random_state` değeri kullanıldığında, modelin başlangıç durumu her seferinde aynı olacaktır.
 
-Naive Bayes             |  Support Vector Machine
-:-------------------------:|:-------------------------:
-![BayesClassifier](https://user-images.githubusercontent.com/77435563/209438951-be49cbe3-1135-444f-8c19-84211fd98c0f.jpg)  |  ![SVMClassifier](https://user-images.githubusercontent.com/77435563/209439020-68b78a8a-a88d-4410-b5bb-7f1869a8fb2c.jpg) <br/><br/><br/>
+Bu yapılandırma ile `LatentDirichletAllocation` sınıfından bir LDA modeli oluşturulur. Bu model, veri setindeki belgelerin gizli konularını keşfetmeye çalışacaktır.
 
-### Kategorilere Göre Başarı Dağılımları
-Kategorilere göre modellerin test verisetindeki başarı dağılımları classification_report() fonksiyonu kullanılarak hesaplanmıştır. Alınan sonuçlar aşağıda bulunmaktadır.<br/><br/>
+Daha sonra, bu model `lda.fit(X)` ile eğitilir. `X` önceki aşamada oluşturulan TF-IDF vektör matrisini temsil eder. Model, bu vektör matrisi üzerinde çalışarak belgelerin gizli konularını öğrenir.
+
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/246cabaa-cea6-4f15-992b-73a79ebfdd8a)
+
+ <br/><br/>
+
+### Modelleri Görselleştirme
+Modeli görselleştirmek için plot_top_words fonksiyonunu yazıyoruz.<br/><br/>
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/432eadd3-78e2-489d-92a3-47b865ed82d0)
+
+
+### LDA Modelinin Görselleştirilmiş Hali
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/01078756-1e79-41c1-916c-58c301484da9)
+
+
+### NMF Modelinin Görselleştirilmiş Hali
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/cd91089b-ba66-4fe0-96bc-030441e871c3)
+
 
 Naive Bayes             |  Support Vector Machine
 :-------------------------:|:-------------------------:

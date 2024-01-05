@@ -16,13 +16,10 @@ Dataseti Twitter(X)'dan çekilen ve istenilen hesaplardan atılmış tweetlerden
 <br/>
 
 Bu twitter hesaplarının seçilme sebebi dünyada en çok etkileşime giren yerli Twitter(X) hesapları olmasıdır:
-https://dogruveri.com/wp-content/uploads/2023/03/Dunyada-en-cok-etkilesime-giren-yerli-Twitter-hesaplari-.png
 
-![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/bb5cbcbc-70d6-4581-bcbf-9877be9488bc)
+![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/bb5cbcbc-70d6-4581-bcbf-9877be9488bc) ![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/7866e486-5890-4a11-8daa-c07ebc7472d6)
 
-![image](https://github.com/enescidem/Dogal_Dil_Isleme/assets/92892867/7866e486-5890-4a11-8daa-c07ebc7472d6)
-
-
+[https://dogruveri.com/wp-content/uploads/2023/03/Dunyada-en-cok-etkilesime-giren-yerli-Twitter-hesaplari-.png](https://dogruveri.com/dunyada-en-cok-etkilesime-giren-yerli-twitter-hesaplari/)
 
 
 <br/>

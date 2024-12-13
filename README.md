@@ -1,7 +1,11 @@
 # Dünyada En Çok Etkileşime Giren Yerli Twitter Hesaplarının Topic Modeling'i
 
-<br/>
+### Medium Links:
+English: https://medium.com/@enescidem/twitter-x-topic-modeling-556d5aad5d0a
 
+Türkçe: https://medium.com/@enescidem/twitter-x-konu-modelleme-e713fea6224f
+
+---
 Topic Modeling, bir metin belgesinde “topics(konular)” adı verilen kelime gruplarını bulmak için kullanılan denetimsiz(unsupervised) bir yaklaşımdır. Twitter(X)'dan alınmış olan farklı hesaplardan (BabalaTv, ProfDemirtas, haluklevent, pusholder, Darkwebhaber, yirmiucderece, solcugazete, OguzhanUgur, vekilince, GalatasaraySK, aykiricomtr ve RTErdogan) çekilen tweetler analiz edilip topiclerinin belirlenmesi.
 <br/>
 ## Kullanılan Kütüphaneler
